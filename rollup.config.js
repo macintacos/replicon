@@ -4,7 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import eslint from "@rollup/plugin-eslint";
 
 export default {
-  input: "src/main.ts",
+  input: "src/ts/main.ts",
   output: {
     dir: "./dist",
     sourcemap: "inline",

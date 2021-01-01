@@ -2,7 +2,8 @@ import { Plugin } from "obsidian";
 
 export default class MyPlugin extends Plugin {
   onload() {
-    console.log("Hey, I'm loaded!");
+    // TODO: Add settings for the theme so that people can customized
+    console.log("hey");
     return;
   }
 }
