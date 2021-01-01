@@ -1,0 +1,8 @@
+/* This is where styles would go..... IF I HAD ANY. */
+.nav-folder-title-content {
+  color: green;
+
+  &:hover {
+    color: blue;
+  }
+}

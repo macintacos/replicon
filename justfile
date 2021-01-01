@@ -18,11 +18,15 @@ hookup:
 
 # concurrently run Rollup and copy files to Obsidian vault locations
 run:
-    npx concurrently "rollup --config rollup.config.js -w" "./watch.sh"
+    npx concurrently \
+        "rollup --config rollup.config.js -w" \
+        "npx postcss src/style/main.css -o dist/styles.css --watch" \
+        "./scripts/watch.sh"
 
 # build the project
 build:
     npx rollup --config rollup.config.js
+    npx postcss src/style/main.css -o dist/styles.css
 
 # format the files that match the FILE_PATTERN
 format FILE_PATTERN:
