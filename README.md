@@ -1,6 +1,6 @@
 # Replicon
 
-I wanted to create a plugin that themed the interface, changed the icons being used, and provided some minor customization options, all in the same repo. And thus, this project was born!
+Replicon is a plugin that themes the Obsidian interface along with providing some options to customize said theme. There is no need to install this plugin and a theme separately; install this plugin and you're done.
 
 This is a WIP, and will be under on-and-off development. Don't expect anything in here to work until I do a 1.0.0 release.
 
@@ -14,25 +14,27 @@ Available recipes:
     install             # get the project setup
     hookup              # setup pre-commit hooks for the project
     run                 # concurrently run Rollup and copy files to Obsidian vault locations
+    build               # build the project
     format FILE_PATTERN # format the files that match the FILE_PATTERN
     lint FILE_PATTERN   # lint the files that match the FILE_PATTERN
 ```
 
-### Contributing
+## Contributing
 
-#### Pre-requisite Tooling
+### Pre-requisite Tooling
 
 - `node` v12.18.4 / `npm` v6.14.6 (minimum)
 - [`just`](https://github.com/casey/just)
-- [`cliclick`](https://github.com/BlueM/cliclick)
 
-#### Developing
+### Developing
 
 - Clone this repo.
 - `$ just install` (sets up the project locally)
 - `$ just run` (develop develop develop)
 
-#### Project Structure
+At some point in the future I'll have a release process that isn't convoluted.
+
+### Project Structure
 
 - Rollup is used to compile the `src/ts/main.ts` to `dist/main.js`
 - PostCSS is used in this project. Files are compiled from `src/style/main.css` into `dist/styles.css`.
@@ -42,9 +44,11 @@ Available recipes:
     - JS is compiled and copied over to `$VAULT/.obsidian/plugins/replicon/main.js`
     - I haven't done any optimization for other OS's, and don't plan to, but feel free to PR if you want to help out!
 
-### Why a plugin when this is mostly a theme?
+## Why a plugin when this is mostly a theme?
 
 Because it allows me to keep the theme and plugin code all in one spot. Note that this will clash with whatever styling you currently have, so feel free to set your "Theme" to "None" - it should still continue to work.
+
+## References
 
 ### API Documentation
 
