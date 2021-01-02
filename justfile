@@ -7,17 +7,23 @@ _default:
 
 # get the project setup
 install: hookup
-    npm install
+    @echo "==> Installing dependencies..."
+    @npm install --no-fund
+    @echo "==> Dependencies successfully installed."
 
 # setup pre-commit hooks for the project
 hookup:
     @echo "==> Setting up hooks..."
-    find .git/hooks -type l -exec rm {} \;
-    find .githooks -type f -exec  ln -sf ../../{} .git/hooks \;
-    @echo "==> Done."
 
-# concurrently run Rollup and copy files to Obsidian vault locations
-run:
+    @echo "==> Removing old hooks, linking hooks to the proper location..."
+    find .git/hooks -type l -exec rm {} \
+        find .githooks -type f -exec  ln -sf ../../{} .git/hooks \;
+
+    @echo "==> Git hooks successfully created."
+
+# compile project continuously in the background for development
+dev: install
+    @echo "==> Compiling project for development..."
     npx concurrently \
         "rollup --config rollup.config.js -w" \
         "npx postcss src/style/main.css -o dist/styles.css --watch" \
@@ -35,3 +41,10 @@ format FILE_PATTERN:
 # lint the files that match the FILE_PATTERN
 lint FILE_PATTERN:
     npx eslint {{FILE_PATTERN}}
+
+# clean out project build artifacts/caches
+clean:
+    @echo "==> Cleaning out artifacts..."
+    rm -rf ./dist
+    rm -rf ./node_modules
+    @echo "==> Cleanup done."

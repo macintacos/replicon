@@ -13,10 +13,11 @@ $ just
 Available recipes:
     install             # get the project setup
     hookup              # setup pre-commit hooks for the project
-    run                 # concurrently run Rollup and copy files to Obsidian vault locations
+    dev                 # compile project continuously in the background for development
     build               # build the project
     format FILE_PATTERN # format the files that match the FILE_PATTERN
     lint FILE_PATTERN   # lint the files that match the FILE_PATTERN
+    clean               # clean out project build artifacts/caches
 ```
 
 ## Contributing
@@ -29,8 +30,7 @@ Available recipes:
 ### Developing
 
 - Clone this repo.
-- `$ just install` (sets up the project locally)
-- `$ just run` (develop develop develop)
+- `$ just dev`
 
 At some point in the future I'll have a release process that isn't convoluted.
 
