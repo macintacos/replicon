@@ -1,8 +1,23 @@
-/* This is where styles would go..... IF I HAD ANY. */
-.nav-folder-title-content {
-  color: green;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-  &:hover {
-    color: blue;
-  }
-}
+@import "clear-svgs";
+
+@import "widgets/file-explorer";
+/*@import "widgets/backlinks";
+@import "widgets/calendar";
+@import "widgets/outline";
+@import "widgets/search";
+@import "widgets/starred";
+@import "widgets/tags";
+
+@import "settings/browse";
+@import "settings/core";
+
+@import "document/editor";
+@import "document/preview";
+@import "other/graph";
+@import "other/importer";
+@import "other/quick-open";
+@import "other/vault";*/
