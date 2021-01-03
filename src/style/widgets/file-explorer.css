@@ -1,0 +1,8 @@
+.nav-folder-title-content {
+  @apply text-green-500;
+
+  &:hover {
+    @apply text-red-600;
+  }
+}
+

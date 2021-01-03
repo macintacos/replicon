@@ -1,0 +1,5 @@
+/* SVGs should be cleared here and then added back in their respective sections */
+
+.collapse-icon > svg {
+  display: none;
+}

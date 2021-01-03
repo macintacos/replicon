@@ -5,7 +5,12 @@ module.exports = {
     require("cssnano"),
     require("postcss-inline-svg"),
     require("postcss-initial"),
-    require("postcss-autoreset"),
-    require("postcss-preset-env"),
+    require("postcss-preset-env")({
+      stage: 2,
+      features: {
+        "nesting-rules": true,
+      },
+    }),
+    require("tailwindcss"),
   ],
 };
