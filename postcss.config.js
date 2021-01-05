@@ -1,10 +1,11 @@
 module.exports = {
   plugins: [
     require("postcss-import"),
+    require("postcss-css-variables"),
     require("autoprefixer"),
-    require("cssnano"),
-    require("postcss-inline-svg"),
-    require("postcss-initial"),
+    require("postcss-inline-svg")({
+      paths: ["src/style/svg"],
+    }),
     require("postcss-preset-env")({
       stage: 2,
       features: {
@@ -12,5 +13,8 @@ module.exports = {
       },
     }),
     require("tailwindcss"),
+    require("cssnano")({
+      preset: "default",
+    }),
   ],
 };
