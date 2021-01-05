@@ -1,0 +1,8 @@
+.side-dock-ribbon-action[aria-label="Settings"]:after {
+  content: svg-load(
+    "chevron-right.svg",
+    stroke=var(--some-color),
+    width=100%,
+    height=100%
+  );
+}

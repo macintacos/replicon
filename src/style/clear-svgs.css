@@ -1,5 +1,5 @@
 /* SVGs should be cleared here and then added back in their respective sections */
 
-.collapse-icon > svg {
+.side-dock-ribbon-action[aria-label="Settings"] > svg {
   display: none;
 }

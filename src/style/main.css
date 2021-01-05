@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 
 @import "clear-svgs";
+@import "colors";
 
 @import "widgets/file-explorer";
 /*@import "widgets/backlinks";
@@ -21,3 +22,4 @@
 @import "other/importer";
 @import "other/quick-open";
 @import "other/vault";*/
+@import "other/sidebar"
